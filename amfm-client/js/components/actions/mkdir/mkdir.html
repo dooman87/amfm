@@ -1,0 +1,13 @@
+<div ng-controller="MkdirController as mkdirCtrl">
+    <a href="" class="button" ng-click="showForm = true">New Dir</a>
+    <div ng-show="showForm" class="mkdir-panel">
+        <div>
+            <input type="text" placeholder="Enter folder name" ng-model="dirName" class="dir-name-input"/>
+        </div>
+
+        <div class="buttons">
+            <a href="" class="button" ng-click="mkdirCtrl.createDir(dirName)">Ok</a>
+            <a href="" ng-click="mkdirCtrl.reset()">Close</a>
+        </div>
+    </div>
+</div>

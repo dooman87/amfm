@@ -1,0 +1,18 @@
+<div ng-controller="UploadController as uploadCtrl">
+    <a href="" class="button" ng-click="open = true">Upload</a>
+
+    <div ng-show="open" class="upload-panel">
+        <input type="file" amfm-files="files" value="Upload files" class="upload-control" multiple>
+
+        <div class="info">
+            <ul>
+                <li ng-repeat="f in files">{{f.name}} <span ng-show="f.progress">({{f.progress}}%)</span></li>
+            </ul>
+        </div>
+        <div class="buttons">
+            <a href="" class="button" ng-click="uploadCtrl.upload()" ng-show="files && files.length">Upload</a>
+            <a href="" ng-click="uploadCtrl.close()">Close</a>
+        </div>
+
+    </div>
+</div>

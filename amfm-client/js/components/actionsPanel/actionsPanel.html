@@ -1,0 +1,7 @@
+<div ng-controller="ActionsPanelController as actionsCtrl" class="actions-wrapper">
+    <ul class="actions-panel">
+        <li class="action" ng-repeat="a in actions">
+            <ng-include src="a.template"></ng-include>
+        </li>
+    </ul>
+</div>

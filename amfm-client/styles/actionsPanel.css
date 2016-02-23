@@ -1,0 +1,39 @@
+.actions-wrapper {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.actions-panel {
+    list-style: none;
+    width: 60%;
+    margin-left: 20%;
+    padding-left: 10px;
+    background-color: whitesmoke;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.actions-panel .action,
+.actions-panel .action div:first-child {
+    display: inline;
+    height: 30px;
+}
+
+.actions-panel .action div .button {
+    height: 30px;
+    min-width: 90px;
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    background-color: yellowgreen;
+    border: 0;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+.actions-panel .action div .button:hover {
+    background-color: green;
+    cursor: pointer;
+}

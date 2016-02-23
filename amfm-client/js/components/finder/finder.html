@@ -1,0 +1,27 @@
+<div ng-controller="FinderController as finderCtrl" class="amfm-finder">
+    <span class="home" ng-click="finderCtrl.changeDir(root, 0)">
+        {{currentPath}}
+    </span>
+    <table>
+        <tr>
+            <td  ng-repeat="p in path">
+                <ul class="folder">
+                    <li ng-show="!p.files || !p.files.length" class="item item-odd no-files">NO FILES</li>
+                    <li ng-repeat="f in p.files" class="item" ng-class-even="'item-even'" ng-class-odd="'item-odd'">
+                        <a ng-show="f.directory" href="" class="folder-item" ng-click="finderCtrl.changeDir(f.fullPath, $parent.$index + 1)">{{f.name}}</a>
+                        <span ng-show="!f.directory" class="file-item">
+                            <input ng-show="$parent.$index === (path.length - 1)" type="checkbox" ng-change="finderCtrl.select(f)" ng-model="f.selected"/>
+                            <span ng-click="finderCtrl.preview(f, $parent.$index)">{{f.name}}</span>
+                        </span>
+                    </li>
+                </ul>
+            </td>
+            <td ng-show="previewUrl">
+                <div class="item preview-item">
+                    <img src="{{previewUrl}}" class="img-preview"/>
+                    <p>{{previewUrl}}</p>
+                </div>
+            </td>
+        </tr>
+    </table>
+</div>

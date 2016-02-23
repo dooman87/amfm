@@ -1,0 +1,19 @@
+.mkdir-panel {
+    position: absolute;
+    left: calc(50% - 200px);
+    top: 30%;
+    width: 400px;
+    border: 1px solid black;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.mkdir-panel .dir-name-input {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.mkdir-panel .buttons {
+    width: 100%;
+    text-align: right;
+}

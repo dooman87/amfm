@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Файл Менеджер</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+    </style>
+
+    <link href="../js/font-awesome-3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link href="styles/finder.css" rel="stylesheet"/>
+    <link href="styles/actionsPanel.css" rel="stylesheet"/>
+    <link href="styles/upload.css" rel="stylesheet"/>
+    <link href="styles/mkdir.css" rel="stylesheet"/>
+    <link href="styles/list.css" rel="stylesheet"/>
+
+    <script src="../admin/bower_components/html5-boilerplate/js/vendor/modernizr-2.6.2.min.js"></script>
+</head>
+<body ng-app="amfmApp">
+    <ng-include src="'js/components/actionsPanel/actionsPanel.html'"></ng-include>
+
+    <ng-view></ng-view>
+
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.min.js"></script>
+
+    <script src="js/components/actions/amfm-actions.js"></script>
+
+    <script src="Amfm.js"></script>
+    <script src="js/App.js"></script>
+    <script src="js/data/fs.js"></script>
+
+    <script src="js/components/actions/upload/uploadController.js"></script>
+    <script src="js/components/actions/mkdir/mkdirController.js"></script>
+    <script src="js/components/actions/rm/rmController.js"></script>
+
+    <script src="js/components/list/listController.js"></script>
+    <script src="js/components/finder/finderController.js"></script>
+    <script src="js/components/actionsPanel/actionsPanelController.js"></script>
+
+    <script src="js/directives/files.js"></script>
+</body>
+</html>

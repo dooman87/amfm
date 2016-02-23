@@ -1,0 +1,28 @@
+.amfm-list {
+    padding: 20px;
+}
+
+.amfm-list .current-path {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.amfm-list .list .item{
+    height: 30px;
+    padding-top: 7px;
+}
+
+.amfm-list .list .item-even {
+    background-color: white;
+}
+
+.amfm-list .list .item-odd {
+    background-color: whitesmoke;
+}
+
+.amfm-list .list .up:before {
+    font-family: FontAwesome;
+    content: '\f148';
+    font-size: 20px;
+}
